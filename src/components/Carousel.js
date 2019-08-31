@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import LoadingImages from "./LoadingImages";
+import LoadedImages from "./LoadedImages";
 const baseURI =
   "https://api.unsplash.com/search/photos/?query=valentines&client_id=be54d4e9fcceb88073bfa9cca3bb8679080222872fb3db357bbf3fe738304baa&per_page=8&order_by=latest";
 
@@ -14,28 +16,6 @@ export default function Carousel() {
     });
   }, []);
   console.log(images);
-
-  const loadingImages = (
-    <div className="carousel-item active">
-      <img src="logo512.png" className="d-block w-100" alt="..." />
-    </div>
-  );
-
-  const loadedImages = images.map((image, index) => {
-    if (index === 0) {
-      return (
-        <div key={index} className="carousel-item active">
-          <img src={image.urls.regular} className="d-block w-100" alt="..." />
-        </div>
-      );
-    } else {
-      return (
-        <div key={index} className="carousel-item">
-          <img src={image.urls.regular} className="d-block w-100" alt="..." />
-        </div>
-      );
-    }
-  });
 
   return (
     <div>
@@ -56,7 +36,7 @@ export default function Carousel() {
           <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         </ol>
         <div className="carousel-inner">
-          {loading ? loadingImages : loadedImages}
+          {loading ? <LoadingImages /> : <LoadedImages images={images} />}
         </div>
         <a
           className="carousel-control-prev"
