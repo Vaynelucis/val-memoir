@@ -10,30 +10,28 @@ export default function Carousel() {
   useEffect(() => {
     axios.get(baseURI).then(result => {
       setImages(result.data.results.slice(0, 5));
-      setLoading(true);
+      setLoading(false);
     });
   }, []);
   console.log(images);
 
-  let loadedImages = images.map((image, index) => {
+  const loadingImages = (
+    <div className="carousel-item active">
+      <img src="logo512.png" className="d-block w-100" alt="..." />
+    </div>
+  );
+
+  const loadedImages = images.map((image, index) => {
     if (index === 0) {
       return (
         <div key={index} className="carousel-item active">
-          <img
-            src={loading ? "logo512.png" : image[index].urls.regular}
-            className="d-block w-100"
-            alt="..."
-          />
+          <img src={image.urls.regular} className="d-block w-100" alt="..." />
         </div>
       );
     } else {
       return (
         <div key={index} className="carousel-item">
-          <img
-            src={loading ? "logo512.png" : image[index].urls.regular}
-            className="d-block w-100"
-            alt="..."
-          />
+          <img src={image.urls.regular} className="d-block w-100" alt="..." />
         </div>
       );
     }
@@ -57,7 +55,9 @@ export default function Carousel() {
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         </ol>
-        <div className="carousel-inner">{loadedImages}</div>
+        <div className="carousel-inner">
+          {loading ? loadingImages : loadedImages}
+        </div>
         <a
           className="carousel-control-prev"
           href="#carouselExampleIndicators"
