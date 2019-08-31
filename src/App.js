@@ -1,18 +1,16 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <h2> Val Memoirs</h2>
-        <nav>
-          <p> Guides </p>
-          <p> Stories </p>
-        </nav>
-      </div>
+    //<div className="App">
+    <div className="container">
+      <Nav />
     </div>
+
+    //</div>
   );
 }
 
