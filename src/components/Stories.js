@@ -1,6 +1,11 @@
 import React from "react";
+import ViewStory from "./viewStory";
 
 export default function Stories() {
+  //   const showStory = e => {
+  //     console.log(e);
+  //     return <ViewStory />;
+  //   };
   const stories = [
     {
       username: "vayne",
@@ -53,13 +58,14 @@ export default function Stories() {
         </header>
         <p>{story.story}</p>
 
-        <button>View more</button>
+        <ViewStory story={story} />
       </div>
     );
   });
   return (
     <div className="container text-center">
       <h2>Stories</h2>
+      <ViewStory />
       <div className="story-container">
         <div className="row">{renderedStories}</div>
       </div>
