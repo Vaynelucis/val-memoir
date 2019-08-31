@@ -41,7 +41,7 @@ export default function Carousel() {
     <div>
       <div
         id="carouselExampleIndicators"
-        className="carousel slide"
+        className="carousel slide container w-75 "
         data-ride="carousel"
       >
         <ol className="carousel-indicators">

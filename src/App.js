@@ -3,6 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import Nav from "./components/Nav";
 import Carousel from "./components/Carousel";
+import Guide from "./components/Guide";
+import Stories from "./components/Stories";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
     <div className="container">
       <Nav />
       <Carousel />
+      <Guide />
+      <Stories />
     </div>
 
     //</div>

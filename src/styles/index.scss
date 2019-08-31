@@ -18,6 +18,20 @@ code {
         monospace;
 }
 
+.story-container {
+    display: flex;
+
+    header {
+        display: flex;
+        justify-content: center;
+
+        div {
+            display: block;
+        }
+
+    }
+}
+
 .nav-container {
     display: flex;
     align-items: center;
