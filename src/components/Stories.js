@@ -24,7 +24,7 @@ export default function Stories() {
     return (
       <div className="story container text-center">
         <header className="story-header text-center">
-          <span className="avater">
+          <span className="avatar">
             {story.firstname.substring(0, 1).toUpperCase()}
             {story.lastname.substring(0, 1).toUpperCase()}
           </span>
