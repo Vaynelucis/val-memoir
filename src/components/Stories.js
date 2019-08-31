@@ -17,12 +17,28 @@ export default function Stories() {
       headline: "The Lucii",
       story:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore."
+    },
+    {
+      username: "Luna",
+      firstname: "Luna",
+      lastname: "Freya",
+      headline: "The Oracle",
+      story:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore."
+    },
+    {
+      username: "Ardyn",
+      firstname: "Ardyn",
+      lastname: "Lucis",
+      headline: "The Usurper",
+      story:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore."
     }
   ];
 
   const renderedStories = stories.map(story => {
     return (
-      <div className="story container text-center">
+      <div className="story container col-xs-12 col-md-4  text-center">
         <header className="story-header text-center">
           <span className="avatar">
             {story.firstname.substring(0, 1).toUpperCase()}
@@ -44,7 +60,9 @@ export default function Stories() {
   return (
     <div className="container text-center">
       <h2>Stories</h2>
-      <div className="story-container">{renderedStories}</div>
+      <div className="story-container">
+        <div className="row">{renderedStories}</div>
+      </div>
     </div>
   );
 }
