@@ -6,16 +6,16 @@ export default function AddStory() {
       type="button"
       className="btn btn-primary"
       data-toggle="modal"
-      data-target={`#exampleModalScrollable${index}`}
+      data-target={`#exampleModalScrollable`}
     >
-      View More
+      Add Story
     </button>
   );
 
   const modal = (
     <div
       className="modal fade"
-      id={`exampleModalScrollable${index}`}
+      id={`exampleModalScrollable`}
       tabIndex="-1"
       role="dialog"
       aria-labelledby="exampleModalScrollableTitle"
@@ -25,15 +25,8 @@ export default function AddStory() {
         <div className="modal-content ">
           <div className="modal-header ">
             <header className="story-header story-header-modal pl-5 ml-md-5">
-              <span className="avatar">
-                {story ? story.firstname.substring(0, 1).toUpperCase() : "J"}
-                {story ? story.lastname.substring(0, 1).toUpperCase() : "D"}
-              </span>
               <div>
-                <h3>{story ? story.headline : "Headline"}</h3>
-                <p>
-                  by <span>{story ? story.username : "Loading"}</span>
-                </p>
+                <h3>Add Your Story</h3>
               </div>
             </header>
 
@@ -46,7 +39,58 @@ export default function AddStory() {
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div className="modal-body">{story ? story.story : "Loading"}</div>
+          <div className="modal-body">
+            <div className="container-fluid"> </div>
+            <form>
+              <div className="form-row">
+                <div className="col">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="First name"
+                  />
+                </div>
+                <div className="col">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last name"
+                  />
+                </div>
+              </div>
+              <div className="form-row my-3">
+                <div className="col">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Username"
+                  />
+                </div>
+                <div className="col">
+                  <select class="form-control">
+                    <option selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="form-row my-3">
+                <div className="col">
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                    placeholder="Your Story"
+                  ></textarea>
+                </div>
+              </div>
+              <button type="submit" className="btn btn-primary text-center">
+                Submit
+              </button>
+            </form>
+          </div>
           <div className="modal-footer">
             <button
               type="button"
@@ -66,13 +110,12 @@ export default function AddStory() {
 
   return (
     <div className="story container col-xs-12 col-md-4  text-center">
-      <a href="#">
-        <header className="story-header text-center">
-          <span className="avatar">+</span>
-          <div></div>
-        </header>
-        <p>Add story</p>
-      </a>
+      <header className="story-header text-center">
+        <span className="avatar">+</span>
+        <div></div>
+      </header>
+      {button}
+      {modal}
     </div>
   );
 }
