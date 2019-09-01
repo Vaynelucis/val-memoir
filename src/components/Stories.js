@@ -41,9 +41,12 @@ export default function Stories() {
     }
   ];
 
-  const renderedStories = stories.map(story => {
+  const renderedStories = stories.map((story, index) => {
     return (
-      <div className="story container col-xs-12 col-md-4  text-center">
+      <div
+        key={index}
+        className="story container col-xs-12 col-md-4  text-center"
+      >
         <header className="story-header text-center">
           <span className="avatar">
             {story.firstname.substring(0, 1).toUpperCase()}
@@ -58,7 +61,7 @@ export default function Stories() {
         </header>
         <p>{story.story}</p>
 
-        <ViewStory story={story} />
+        <ViewStory story={story} index={index} />
       </div>
     );
   });

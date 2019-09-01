@@ -13,7 +13,7 @@ export default function Carousel() {
       setLoading(false);
     });
   }, []);
-  console.log(images);
+  // console.log(images);
 
   const loadingImages = (
     <div className="carousel-item active">
