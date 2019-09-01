@@ -1,5 +1,6 @@
 import React from "react";
 import ViewStory from "./viewStory";
+import AddStory from "./AddStory";
 
 export default function Stories() {
   //   const showStory = e => {
@@ -45,7 +46,7 @@ export default function Stories() {
     return (
       <div
         key={index}
-        className="story container col-xs-12 col-md-4  text-center"
+        className="story container col-xs-12 col-md-4   text-center"
       >
         <header className="story-header text-center">
           <span className="avatar">
@@ -59,7 +60,7 @@ export default function Stories() {
             </p>
           </div>
         </header>
-        <p>{story.story.substring(0,98)}...</p>
+        <p>{story.story.substring(0, 98)}...</p>
 
         <ViewStory story={story} index={index} />
       </div>
@@ -68,8 +69,12 @@ export default function Stories() {
   return (
     <div className="container text-center">
       <h2>Stories</h2>
-      <div className="story-container">
-        <div className="row">{renderedStories}</div>
+      <div className="story-container ">
+        <div className="row">
+          {renderedStories}
+
+          <AddStory />
+        </div>
       </div>
     </div>
   );
