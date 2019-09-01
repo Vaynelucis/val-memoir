@@ -59,7 +59,7 @@ export default function Stories() {
             </p>
           </div>
         </header>
-        <p>{story.story}</p>
+        <p>{story.story.substring(0,98)}...</p>
 
         <ViewStory story={story} index={index} />
       </div>
@@ -68,7 +68,6 @@ export default function Stories() {
   return (
     <div className="container text-center">
       <h2>Stories</h2>
-      <ViewStory />
       <div className="story-container">
         <div className="row">{renderedStories}</div>
       </div>

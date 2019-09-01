@@ -3,32 +3,31 @@ import React from "react";
 export default function viewStory({ story, index }) {
   console.log(story);
   console.log(`#exampleModalScrollable${index}`);
-  const data = `data-target="#exampleModalScrollable${index}"`;
-  const id = `id="#exampleModalScrollable${index}"`;
+
   const button = (
     <button
       type="button"
-      class="btn btn-primary"
+      className="btn btn-primary"
       data-toggle="modal"
       data-target={`#exampleModalScrollable${index}`}
     >
-      Launch demo modal
+      View More
     </button>
   );
 
   const modal = (
     <div
-      class="modal fade"
+      className="modal fade"
       id={`exampleModalScrollable${index}`}
-      tabindex="-1"
+      tabIndex="-1"
       role="dialog"
       aria-labelledby="exampleModalScrollableTitle"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-dialog-scrollable" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <header className="story-header text-center">
+      <div className="modal-dialog modal-dialog-scrollable" role="document">
+        <div className="modal-content ">
+          <div className="modal-header ">
+            <header className="story-header story-header-modal pl-5 ml-md-5">
               <span className="avatar">
                 {story ? story.firstname.substring(0, 1).toUpperCase() : "J"}
                 {story ? story.lastname.substring(0, 1).toUpperCase() : "D"}
@@ -43,25 +42,25 @@ export default function viewStory({ story, index }) {
 
             <button
               type="button"
-              class="close"
+              className="close"
               data-dismiss="modal"
               aria-label="Close"
             >
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
+          <div className="modal-body">{story ? story.story : "Loading"}</div>
+          <div className="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              className="btn btn-secondary"
               data-dismiss="modal"
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">
+            {/* <button type="button" class="btn btn-primary">
               Save changes
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

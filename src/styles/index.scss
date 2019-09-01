@@ -46,6 +46,14 @@ code {
     }
 }
 
+@media(min-width:511px) {
+
+    .story-header-modal {
+        // width: 100%;
+        // padding: 0 25%;
+    }
+}
+
 .nav-container {
     display: flex;
     align-items: center;
