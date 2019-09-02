@@ -17,7 +17,6 @@ export default function AddStory({ newStory, currentStories }) {
     setIndicator(invalidMarkup);
   }, [valid]);
 
-  //   let valid = true;
   let styleValid = {
     display: `${valid ? "none" : "block"}`,
     color: "red"
@@ -26,44 +25,23 @@ export default function AddStory({ newStory, currentStories }) {
   const validateUsername = e => {
     let currentValue = e.target.value;
 
-    // currentStories.map(story => {
-    //   story.username === currentValue ? (valid = false) : (valid = true);
-    // });
-
     for (let index = 0; index < currentStories.length; index++) {
       if (
         currentStories[index].username.toLowerCase() ===
         currentValue.toLowerCase()
       ) {
         setValid(false);
-        // display = "block";
         break;
       } else {
         setValid(true);
-        // display = "d-none";
       }
     }
-
-    // currentStories.map(story => {
-    //   if (story.username === currentValue) {
-    //     valid = false;
-    //     return;
-    //   } else {
-    //     valid = true;
-    //   }
-    // });
-
-    // valid == true ? handleSubmit() : (display = "");
-    //   console.log(e.target.value);
   };
-  //   validateUsername();
-  //   const display = () => {};
+
   const handleSubmit = e => {
-    // console.log(currentStories);
     console.log(valid);
     e.preventDefault();
     if (valid) {
-      // e.reset();
       const submitedFields = {
         username: e.target.userName.value,
         firstname: e.target.firstName.value,
@@ -76,10 +54,6 @@ export default function AddStory({ newStory, currentStories }) {
       newStory(submitedFields);
       e.target.reset();
     }
-
-    // console.log(e.target);
-
-    // console.log(submitedFields);
   };
 
   const button = (
