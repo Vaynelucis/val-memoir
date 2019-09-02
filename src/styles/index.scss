@@ -1,7 +1,18 @@
+@font-face {
+    font-family: "AvenirNext";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Avenir Next LT Pro Regular"),
+        url("./avenir-next-pro/AvenirNextLTPro-Regular.woff") format("woff");
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: avenirNext;
+    // background-color: #fbfbfd;
 
 
 
@@ -14,9 +25,7 @@
 
     .myCarousel {
         img {
-            // height: auto !important;
             height: 90vh !important;
-            // width: 2000px !important;
             object-fit: cover !important;
         }
     }
@@ -176,7 +185,8 @@ h2 {
 
         a {
             margin: 0 20px;
-            color: #c72b50
+            color: #c72b50;
+            font-weight: 600;
         }
     }
 

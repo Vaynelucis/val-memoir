@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "AvenirNext";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Avenir Next LT Pro Regular"), url("./avenir-next-pro/AvenirNextLTPro-Regular.woff") format("woff");
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: avenirNext;
 }
 
 @media (min-width: 1200px) {
@@ -147,5 +155,6 @@ h2 {
 .nav-container .nav a {
   margin: 0 20px;
   color: #c72b50;
+  font-weight: 600;
 }
 /*# sourceMappingURL=index.css.map */
