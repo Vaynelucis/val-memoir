@@ -81,7 +81,7 @@ img {
     // flex-wrap: nowrap !important !important;
 
     div {
-        max-height: 70vh;
+        max-height: 80vh;
 
         // flex: 1 !important !important;
         // justify-content: flex-end !important !important;
@@ -111,7 +111,7 @@ img {
     display: flex;
     align-items: center;
 
-    padding: 20px;
+    padding: 10px;
 
     span {
         color: red
@@ -131,6 +131,7 @@ img {
 
         a {
             margin: 0 20px;
+            color: red;
 
         }
     }

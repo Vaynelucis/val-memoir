@@ -16,9 +16,35 @@ export default function Carousel() {
   // console.log(images);
 
   const loadingImages = (
-    <div className="d-flex justify-content-center">
-      <h2 className=" text-center ">Loading</h2>
-    </div>
+    <section className="text-center">
+      <section class="spinner-border text-center" role="status">
+        <span class="sr-only">Loading...</span>
+      </section>
+    </section>
+  );
+
+  const carouselControlPrev = (
+    <a
+      className="carousel-control-prev"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="prev"
+    >
+      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span className="sr-only">Previous</span>
+    </a>
+  );
+
+  const carouselControlNext = (
+    <a
+      className="carousel-control-next"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="next"
+    >
+      <span className="carousel-control-next-icon" aria-hidden="true"></span>
+      <span className="sr-only">Next</span>
+    </a>
   );
 
   const loadedImages = images.map((image, index) => {
@@ -27,7 +53,7 @@ export default function Carousel() {
       return (
         <div key={index} className="carousel-item active">
           <img
-            src={`${image.urls.raw}&h=800&dip=2`}
+            src={`${image.urls.regular}`}
             className="d-block w-100 "
             alt="..."
           />
@@ -37,7 +63,7 @@ export default function Carousel() {
       return (
         <div key={index} className="carousel-item">
           <img
-            src={`${image.urls.raw}&h=800&dpi=2`}
+            src={`${image.urls.regular}`}
             className="d-block w-100"
             alt="..."
           />
@@ -53,44 +79,11 @@ export default function Carousel() {
         className="carousel slide container  mx-0 px-0"
         data-ride="carousel"
       >
-        <ol className="carousel-indicators">
-          <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
-            className="active"
-          ></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        </ol>
         <div className="carousel-inner">
           {loading ? loadingImages : loadedImages}
         </div>
-        <a
-          className="carousel-control-prev"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only">Previous</span>
-        </a>
-        <a
-          className="carousel-control-next"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only">Next</span>
-        </a>
+        {loading ? "" : carouselControlPrev}
+        {loading ? "" : carouselControlNext}
       </div>
     </div>
   );
