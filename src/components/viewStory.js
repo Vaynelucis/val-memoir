@@ -42,7 +42,11 @@ export default function viewStory({ story, index, addLike }) {
               <div>
                 <h3>{story ? story.headline : "Headline"}</h3>
                 <p>
-                  by <span>{story ? story.username : "Loading"}</span>
+                  by{" "}
+                  <span>
+                    {story ? story.firstname : "Loading"}{" "}
+                    {story ? story.lastname : "Loading"}
+                  </span>
                 </p>
               </div>
             </header>

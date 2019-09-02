@@ -1,20 +1,56 @@
 import React, { useState } from "react";
 
-export default function AddStory({ newStory }) {
-  const handleSubmit = e => {
-    e.preventDefault();
-    // e.reset();
-    const submitedFields = {
-      username: e.target.userName.value,
-      firstname: e.target.firstName.value,
-      lastname: e.target.lastName.value,
-      headline: e.target.headline.value,
-      story: e.target.story.value,
-      likes: 0
-    };
+export default function AddStory({ newStory, currentStories }) {
+  let display = "d-none";
+  let valid = true;
+  const validateUsername = e => {
+    let currentValue = e.target.value;
 
-    newStory(submitedFields);
-    e.target.reset();
+    // currentStories.map(story => {
+    //   story.username === currentValue ? (valid = false) : (valid = true);
+    // });
+
+    for (let index = 0; index < currentStories.length; index++) {
+      if (currentStories[index].username === currentValue) {
+        valid = false;
+        break;
+      } else {
+        valid = true;
+      }
+    }
+
+    // currentStories.map(story => {
+    //   if (story.username === currentValue) {
+    //     valid = false;
+    //     return;
+    //   } else {
+    //     valid = true;
+    //   }
+    // });
+
+    // valid == true ? handleSubmit() : (display = "");
+    //   console.log(e.target.value);
+  };
+  //   validateUsername();
+  //   const display = () => {};
+  const handleSubmit = e => {
+    // console.log(currentStories);
+    console.log(valid);
+    e.preventDefault();
+    if (valid) {
+      // e.reset();
+      const submitedFields = {
+        username: e.target.userName.value,
+        firstname: e.target.firstName.value,
+        lastname: e.target.lastName.value,
+        headline: e.target.headline.value,
+        story: e.target.story.value,
+        likes: 0
+      };
+
+      newStory(submitedFields);
+      e.target.reset();
+    }
 
     // console.log(e.target);
 
@@ -82,13 +118,27 @@ export default function AddStory({ newStory }) {
                   />
                 </div>
               </div>
+              <div className={`"form-row my-0 text-left ${display} "`}>
+                <div className="col my-0">
+                  <label
+                    htmlFor="username"
+                    className=" text-left  py-0 mt-3 mb-0"
+                  >
+                    Invalid username
+                  </label>
+                </div>
+              </div>
+
               <div className="form-row my-3">
                 <div className="col">
+                  <div class="form-group d-none"></div>
                   <input
+                    onChange={validateUsername}
                     type="text"
                     className="form-control"
                     placeholder="Username"
                     name="userName"
+                    id="username"
                     required
                   />
                 </div>
@@ -101,7 +151,6 @@ export default function AddStory({ newStory }) {
                   </select>
                 </div>
               </div>
-
               <div className="form-row">
                 <div className="col">
                   <input
@@ -113,7 +162,6 @@ export default function AddStory({ newStory }) {
                   />
                 </div>
               </div>
-
               <div className="form-row my-3">
                 <div className="col">
                   <textarea

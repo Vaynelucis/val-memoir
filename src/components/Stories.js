@@ -107,7 +107,7 @@ export default function Stories() {
       <div className="story-container ">
         <div className="row">
           {markup}
-          <AddStory newStory={newStory} />
+          <AddStory newStory={newStory} currentStories={updatedStories} />
         </div>
       </div>
     </div>
