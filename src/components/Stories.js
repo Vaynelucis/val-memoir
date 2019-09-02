@@ -7,7 +7,18 @@ export default function Stories() {
   //     console.log(e);
   //     return <ViewStory />;
   //   };
-  const stories = [
+
+  const newStory = story => {
+    stories.push({
+      username: story.username,
+      firstname: story.firstname,
+      lastname: story.lastname,
+      headline: story.headline,
+      story: story.story
+    });
+  };
+
+  let stories = [
     {
       username: "vayne",
       firstname: "Vayne",
@@ -72,8 +83,7 @@ export default function Stories() {
       <div className="story-container ">
         <div className="row">
           {renderedStories}
-
-          <AddStory />
+          <AddStory newStory={newStory} />
         </div>
       </div>
     </div>

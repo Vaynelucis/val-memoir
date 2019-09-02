@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function AddStory() {
+export default function AddStory({ newStory }) {
+  const [formFields, setFormFields] = useState({});
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    // e.target.reset();
+    // e.reset();
+    console.log(e.target.username.value);
+  };
+
   const button = (
     <button
       type="button"
@@ -41,7 +50,7 @@ export default function AddStory() {
           </div>
           <div className="modal-body">
             <div className="container-fluid"> </div>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="col">
                   <input
@@ -53,7 +62,7 @@ export default function AddStory() {
                 <div className="col">
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Last name"
                   />
                 </div>
@@ -64,11 +73,12 @@ export default function AddStory() {
                     type="text"
                     className="form-control"
                     placeholder="Username"
+                    name="username"
                   />
                 </div>
                 <div className="col">
-                  <select class="form-control">
-                    <option selected>Gender</option>
+                  <select className="form-control">
+                    <option defaultValue>Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="others">Others</option>
@@ -79,7 +89,7 @@ export default function AddStory() {
               <div className="form-row my-3">
                 <div className="col">
                   <textarea
-                    class="form-control"
+                    className="form-control"
                     id="exampleFormControlTextarea1"
                     rows="3"
                     placeholder="Your Story"
@@ -99,9 +109,6 @@ export default function AddStory() {
             >
               Close
             </button>
-            {/* <button type="button" class="btn btn-primary">
-                  Save changes
-                </button> */}
           </div>
         </div>
       </div>
