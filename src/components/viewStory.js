@@ -1,12 +1,7 @@
 import React from "react";
 
 export default function viewStory({ story, index, addLike }) {
-  // console.log(story);
-  // console.log(`#exampleModalScrollable${index}`);
-
   const like = e => {
-    // console.log(e.target);
-    // console.log(story);
     story.likes += 1;
     addLike(story, index);
   };
@@ -77,9 +72,6 @@ export default function viewStory({ story, index, addLike }) {
             >
               Close
             </button>
-            {/* <button type="button" class="btn btn-primary">
-              Save changes
-            </button> */}
           </div>
         </div>
       </div>

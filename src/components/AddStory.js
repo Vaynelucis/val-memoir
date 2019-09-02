@@ -123,7 +123,7 @@ export default function AddStory({ newStory, currentStories }) {
 
               <div className="form-row my-3">
                 <div className="col">
-                  <div class="form-group d-none"></div>
+                  <div className="form-group d-none"></div>
                   <input
                     onChange={validateUsername}
                     type="text"

@@ -13,12 +13,11 @@ export default function Carousel() {
       setLoading(false);
     });
   }, []);
-  // console.log(images);
 
   const loadingImages = (
     <section className="text-center">
-      <section class="spinner-border text-center" role="status">
-        <span class="sr-only">Loading...</span>
+      <section className="spinner-border text-center" role="status">
+        <span className="sr-only">Loading...</span>
       </section>
     </section>
   );
@@ -48,7 +47,6 @@ export default function Carousel() {
   );
 
   const loadedImages = images.map((image, index) => {
-    // console.log(image.height);
     if (index === 0) {
       return (
         <div key={index} className="carousel-item active">

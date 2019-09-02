@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // background-color: #FBFBFD;
+
 
 }
 
@@ -45,8 +45,7 @@ body {
 }
 
 .story-container {
-    // display: flex;
-    // justify-content: center;
+
 
     .avatar {
         background-color: #c72b50;
@@ -54,11 +53,9 @@ body {
         line-height: 32px;
         height: 32px;
         width: 32px;
-        // text-align: center;
-        // align-items: center;
+
         margin: 0 10px;
-        // align-self: center;
-        // justify-self: center;
+
     }
 
     header {
@@ -72,7 +69,6 @@ body {
     }
 }
 
-// .myCarousel {}
 
 .btn {
     background-color: #c72b50 !important;
@@ -83,7 +79,6 @@ h2 {
 }
 
 img {
-    // width: 100%;
     height: auto !important;
 }
 
@@ -100,45 +95,24 @@ img {
     }
 }
 
-.story {
-    // margin-bottom: 50px;
-}
-
 .myCarousel {
 
-    // display: flex !important !important;
-    // align-items: center !important !important;
-    // flex-wrap: nowrap !important !important;
+
 
     max-width: 100vw;
 
 
 
-    div {
-        // max-height: 80vh;
 
-        // flex: 1 !important !important;
-        // justify-content: flex-end !important !important;
-        // overflow: auto;
-
-        // width: 99vw !important;
-        // min-width: 80vw !important;
-    }
 }
 
 .myCarousel a {
     position: absolute !important;
-    // right: 0px !important;
+
 
 }
 
-@media(min-width:511px) {
-
-    .story-header-modal {
-        // width: 100%;
-        // padding: 0 25%;
-    }
-}
+@media(min-width:511px) {}
 
 .nav-container {
     display: flex;
@@ -151,8 +125,7 @@ img {
         color: #c72b50
     }
 
-    // width: 100%;
-    // background-color: aqua;
+
     .nav {
         flex: 1;
         justify-content: flex-end;
