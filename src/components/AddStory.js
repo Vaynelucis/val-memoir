@@ -186,10 +186,7 @@ export default function AddStory({ newStory, currentStories }) {
 
   return (
     <div className="story container col-xs-12 col-md-3 mb-5 mx-5  text-center">
-      <header className="story-header text-center">
-        {button}
-        <div></div>
-      </header>
+      <header className="story-header my-5  text-center">{button}</header>
       {modal}
     </div>
   );

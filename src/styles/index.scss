@@ -82,6 +82,9 @@ body {
 }
 
 
+.story-header {}
+
+
 .btn-primary.focus,
 .btn-primary:focus {
 
@@ -103,6 +106,8 @@ h2 {
 .addStory {
     max-height: 100px;
     max-width: 100px;
+
+
 
     :hover {
         cursor: pointer;
