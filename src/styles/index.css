@@ -88,6 +88,11 @@ h2 {
   margin: 20px 0;
 }
 
+.story {
+  -webkit-box-shadow: 5px 8px 5px #888888;
+          box-shadow: 5px 8px 5px #888888;
+}
+
 .myCarousel {
   max-width: 100vw;
 }
