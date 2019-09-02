@@ -58,7 +58,6 @@ export default function Stories() {
   };
 
   const addLike = (story, index) => {
-    console.log(story, index);
     setStories(() => {
       let stories = [...updatedStories];
       stories[index].likes = story.likes;

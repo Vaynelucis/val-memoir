@@ -61,7 +61,7 @@ export default function AddStory({ newStory }) {
           </div>
           <div className="modal-body">
             <div className="container-fluid"> </div>
-            <form onSubmit={handleSubmit}>
+            <form autoComplete="off" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="col">
                   <input
@@ -69,6 +69,7 @@ export default function AddStory({ newStory }) {
                     className="form-control"
                     name="firstName"
                     placeholder="First name"
+                    required
                   />
                 </div>
                 <div className="col">
@@ -77,6 +78,7 @@ export default function AddStory({ newStory }) {
                     className="form-control"
                     placeholder="Last name"
                     name="lastName"
+                    required
                   />
                 </div>
               </div>
@@ -87,11 +89,12 @@ export default function AddStory({ newStory }) {
                     className="form-control"
                     placeholder="Username"
                     name="userName"
+                    required
                   />
                 </div>
                 <div className="col">
-                  <select name="gender" className="form-control">
-                    <option defaultValue>Gender</option>
+                  <select name="gender" className="form-control" required>
+                    <option value="">Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="others">Others</option>
@@ -106,6 +109,7 @@ export default function AddStory({ newStory }) {
                     className="form-control"
                     name="headline"
                     placeholder="Headline"
+                    required
                   />
                 </div>
               </div>
@@ -118,6 +122,7 @@ export default function AddStory({ newStory }) {
                     rows="3"
                     name="story"
                     placeholder="Your Story"
+                    required
                   ></textarea>
                 </div>
               </div>
