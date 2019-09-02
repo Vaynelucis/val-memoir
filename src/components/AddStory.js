@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 
 export default function AddStory({ newStory }) {
-  const [formFields, setFormFields] = useState({});
-
   const handleSubmit = e => {
     e.preventDefault();
     // e.target.reset();
     // e.reset();
-  const  submitedFields = {};
-    console.log(e.target.username.value);
+    const submitedFields = {
+      username: e.target.userName.value,
+      firstname: e.target.firstName.value,
+      lastname: e.target.lastName.value,
+      headline: e.target.headline.value,
+      story: e.target.story.value
+    };
+
+    newStory(submitedFields);
+
+    // console.log(submitedFields);
   };
 
   const button = (
@@ -76,7 +83,7 @@ export default function AddStory({ newStory }) {
                     type="text"
                     className="form-control"
                     placeholder="Username"
-                    name="username"
+                    name="userName"
                   />
                 </div>
                 <div className="col">
@@ -86,6 +93,17 @@ export default function AddStory({ newStory }) {
                     <option value="female">Female</option>
                     <option value="others">Others</option>
                   </select>
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="col">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="headline"
+                    placeholder="Headline"
+                  />
                 </div>
               </div>
 

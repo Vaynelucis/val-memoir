@@ -1,8 +1,8 @@
 import React from "react";
 
 export default function viewStory({ story, index }) {
-  console.log(story);
-  console.log(`#exampleModalScrollable${index}`);
+  // console.log(story);
+  // console.log(`#exampleModalScrollable${index}`);
 
   const button = (
     <button
