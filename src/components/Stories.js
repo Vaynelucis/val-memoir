@@ -79,7 +79,7 @@ export default function Stories() {
       return (
         <div
           key={index}
-          className="story container-fluid col-xs-12 col-md-4 mb-5  text-center"
+          className="story container-fluid col-xs-12 col-md-3 mb-5 mx-5  text-center"
         >
           <header className="story-header text-center">
             <span className="avatar">
@@ -116,7 +116,11 @@ export default function Stories() {
       <div className="story-container ">
         <div className="row">
           {markup}
-          <AddStory newStory={newStory} currentStories={updatedStories} />
+          <AddStory
+            className=""
+            newStory={newStory}
+            currentStories={updatedStories}
+          />
         </div>
       </div>
     </div>

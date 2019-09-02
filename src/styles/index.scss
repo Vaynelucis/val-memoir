@@ -82,8 +82,17 @@ body {
 }
 
 
+.btn-primary.focus,
+.btn-primary:focus {
+
+    box-shadow: 0 0 0 0.2rem #c72b50 !important;
+}
+
 .btn {
     background-color: #c72b50 !important;
+    border-color: #c72b50 !important;
+
+
 }
 
 h2 {
@@ -105,7 +114,9 @@ h2 {
 }
 
 .story {
-    box-shadow: 5px 8px 5px #888888;
+    box-shadow: 3px 2px 5px 2px #888888;
+    padding: 20px 0;
+    border-radius: 8px;
 }
 
 .myCarousel {
