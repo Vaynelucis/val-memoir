@@ -17,7 +17,7 @@ export default function Stories() {
       username: "Nyx",
       firstname: "nyx",
       lastname: "Ulric",
-      headline: "The Lucii",
+      headline: "The Soldier",
       story:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore.",
       likes: 10
@@ -27,6 +27,15 @@ export default function Stories() {
       firstname: "Luna",
       lastname: "Freya",
       headline: "The Oracle",
+      story:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore.",
+      likes: 10
+    },
+    {
+      username: "Cor",
+      firstname: "Cor",
+      lastname: "Leonis",
+      headline: "The Bodyguard",
       story:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore.",
       likes: 10

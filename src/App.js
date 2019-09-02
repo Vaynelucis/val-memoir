@@ -9,7 +9,7 @@ import Stories from "./components/Stories";
 function App() {
   return (
     //<div className="App">
-    <div className="">
+    <div className="appBody">
       <Nav />
       <Carousel />
       <Guide />
