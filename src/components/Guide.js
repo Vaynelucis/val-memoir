@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Guide() {
   return (
-    <div>
+    <div id="guide">
       <h2 className="text-center">Sharing Guide</h2>
       <p className="text-center">
         Recollect your fond memories of Valentines day

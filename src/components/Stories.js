@@ -70,7 +70,7 @@ export default function Stories() {
       return (
         <div
           key={index}
-          className="story container col-xs-12 col-md-4   text-center"
+          className="story container-fluid col-xs-12 col-md-4 mb-5  text-center"
         >
           <header className="story-header text-center">
             <span className="avatar">
@@ -102,7 +102,7 @@ export default function Stories() {
   }, [updatedStories]);
 
   return (
-    <div className="container text-center">
+    <div id="stories" className="container text-center">
       <h2>Stories</h2>
       <div className="story-container ">
         <div className="row">

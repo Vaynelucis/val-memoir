@@ -38,12 +38,29 @@ code {
   display: block;
 }
 
+h2 {
+  padding: 20px;
+}
+
 img {
   height: auto !important;
 }
 
+.addStory {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.addStory :hover {
+  cursor: pointer;
+}
+
+.addStory p {
+  margin: 20px 0;
+}
+
 .myCarousel div {
-  max-height: 50vh;
+  max-height: 70vh;
   width: 100vw !important;
   min-width: 100vw !important;
 }

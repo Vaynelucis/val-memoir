@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logo from "../styles/plus.svg";
 
 export default function AddStory({ newStory, currentStories }) {
   const [valid, setValid] = useState(true);
@@ -57,14 +58,14 @@ export default function AddStory({ newStory, currentStories }) {
   };
 
   const button = (
-    <button
-      type="button"
-      className="btn btn-primary"
+    <div
       data-toggle="modal"
       data-target={`#exampleModalScrollable`}
+      className="addStory"
     >
-      Add Story
-    </button>
+      <img src={logo} alt="" />
+      <p className=" ">Add Story</p>
+    </div>
   );
 
   const modal = (
@@ -187,10 +188,9 @@ export default function AddStory({ newStory, currentStories }) {
   return (
     <div className="story container col-xs-12 col-md-4  text-center">
       <header className="story-header text-center">
-        <span className="avatar">+</span>
+        {button}
         <div></div>
       </header>
-      {button}
       {modal}
     </div>
   );

@@ -26,13 +26,21 @@ export default function Carousel() {
     if (index === 0) {
       return (
         <div key={index} className="carousel-item active">
-          <img src={image.urls.full} className="d-block w-100 " alt="..." />
+          <img
+            src={`${image.urls.raw}&h=800&dip=2`}
+            className="d-block w-100 "
+            alt="..."
+          />
         </div>
       );
     } else {
       return (
         <div key={index} className="carousel-item">
-          <img src={image.urls.full} className="d-block w-100" alt="..." />
+          <img
+            src={`${image.urls.raw}&h=800&dpi=2`}
+            className="d-block w-100"
+            alt="..."
+          />
         </div>
       );
     }
