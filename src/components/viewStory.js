@@ -9,7 +9,7 @@ export default function viewStory({ story, index, addLike }) {
   const button = (
     <button
       type="button"
-      className="btn btn-primary"
+      className="btn btn-primary btn-sm"
       data-toggle="modal"
       data-target={`#exampleModalScrollable${index}`}
     >
@@ -60,18 +60,18 @@ export default function viewStory({ story, index, addLike }) {
             <p className=" mt-3 r-3">{story ? story.likes : "loading"} likes</p>
             <button
               type="button"
-              className="btn btn-secondary mx-3 "
+              className="btn btn-secondary btn-sm mx-3 "
               onClick={like}
             >
               Like
             </button>
-            <button
+            {/* <button
               type="button"
-              className="btn btn-secondary  "
+              className="btn btn-secondary btn-sm "
               data-dismiss="modal"
             >
               Close
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
