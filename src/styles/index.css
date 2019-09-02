@@ -9,6 +9,11 @@
   .container {
     max-width: 100%;
   }
+  .myCarousel img {
+    height: 90vh !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -70,10 +75,6 @@ h2 {
   padding: 20px;
 }
 
-img {
-  height: auto !important;
-}
-
 .addStory {
   max-height: 100px;
   max-width: 100px;
@@ -91,6 +92,10 @@ img {
   max-width: 100vw;
 }
 
+.myCarousel div {
+  max-height: 90vh !important;
+}
+
 .myCarousel a {
   position: absolute !important;
 }
@@ -102,7 +107,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: auto;
+  max-height: 10vh;
   padding: 10px;
 }
 
