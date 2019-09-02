@@ -46,6 +46,16 @@ code {
     }
 }
 
+.myCarousel div {
+    width: 100vw !important;
+}
+
+.myCarousel a {
+    position: absolute !important;
+    // right: 0px !important;
+
+}
+
 @media(min-width:511px) {
 
     .story-header-modal {

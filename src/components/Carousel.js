@@ -38,10 +38,10 @@ export default function Carousel() {
   });
 
   return (
-    <div>
+    <div className="myCarousel  mx-0 px-0">
       <div
         id="carouselExampleIndicators"
-        className="carousel slide container w-75 "
+        className="carousel slide container  mx-0 px-0"
         data-ride="carousel"
       >
         <ol className="carousel-indicators">
