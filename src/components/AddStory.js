@@ -7,6 +7,7 @@ export default function AddStory({ newStory }) {
     e.preventDefault();
     // e.target.reset();
     // e.reset();
+  const  submitedFields = {};
     console.log(e.target.username.value);
   };
 
@@ -56,6 +57,7 @@ export default function AddStory({ newStory }) {
                   <input
                     type="text"
                     className="form-control"
+                    name="firstName"
                     placeholder="First name"
                   />
                 </div>
@@ -64,6 +66,7 @@ export default function AddStory({ newStory }) {
                     type="text"
                     className="form-control"
                     placeholder="Last name"
+                    name="lastName"
                   />
                 </div>
               </div>
@@ -77,7 +80,7 @@ export default function AddStory({ newStory }) {
                   />
                 </div>
                 <div className="col">
-                  <select className="form-control">
+                  <select name="gender" className="form-control">
                     <option defaultValue>Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -92,6 +95,7 @@ export default function AddStory({ newStory }) {
                     className="form-control"
                     id="exampleFormControlTextarea1"
                     rows="3"
+                    name="story"
                     placeholder="Your Story"
                   ></textarea>
                 </div>
