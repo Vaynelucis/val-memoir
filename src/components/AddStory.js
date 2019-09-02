@@ -1,8 +1,20 @@
 import React, { useState } from "react";
 
 export default function AddStory({ newStory, currentStories }) {
-  let display = "d-none";
   let valid = true;
+  let styleValid = {
+    display: `${valid ? "none" : "block"}`
+  };
+  let invalidStyle = (
+    <div style={styleValid} className="form-row my-0 text-left">
+      <div className="col my-0">
+        <label htmlFor="username" className=" text-left  py-0 mt-3 mb-0">
+          Invalid username
+        </label>
+      </div>
+    </div>
+  );
+
   const validateUsername = e => {
     let currentValue = e.target.value;
 
@@ -13,9 +25,11 @@ export default function AddStory({ newStory, currentStories }) {
     for (let index = 0; index < currentStories.length; index++) {
       if (currentStories[index].username === currentValue) {
         valid = false;
+        // display = "block";
         break;
       } else {
         valid = true;
+        // display = "d-none";
       }
     }
 
@@ -118,16 +132,8 @@ export default function AddStory({ newStory, currentStories }) {
                   />
                 </div>
               </div>
-              <div className={`"form-row my-0 text-left ${display} "`}>
-                <div className="col my-0">
-                  <label
-                    htmlFor="username"
-                    className=" text-left  py-0 mt-3 mb-0"
-                  >
-                    Invalid username
-                  </label>
-                </div>
-              </div>
+
+              {invalidStyle}
 
               <div className="form-row my-3">
                 <div className="col">
