@@ -3,7 +3,6 @@ import React, { useState } from "react";
 export default function AddStory({ newStory }) {
   const handleSubmit = e => {
     e.preventDefault();
-    // e.target.reset();
     // e.reset();
     const submitedFields = {
       username: e.target.userName.value,
@@ -14,6 +13,9 @@ export default function AddStory({ newStory }) {
     };
 
     newStory(submitedFields);
+    e.target.reset();
+
+    console.log(e.target);
 
     // console.log(submitedFields);
   };

@@ -3,11 +3,6 @@ import ViewStory from "./viewStory";
 import AddStory from "./AddStory";
 
 export default function Stories() {
-  //   const showStory = e => {
-  //     console.log(e);
-  //     return <ViewStory />;
-  //   };
-
   const [updatedStories, setStories] = useState([
     {
       username: "vayne",
