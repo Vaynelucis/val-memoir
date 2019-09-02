@@ -7,9 +7,11 @@ export default function Guide() {
       <p className="text-center">
         Recollect your fond memories of Valentines day
       </p>
-      <p className="text-center">remember the good parts</p>
-      <p className="text-center">remember the sad parts</p>
-      <p className="text-center"> write down each detail </p>
+      <p className="text-center">remember how the day started</p>
+      <p className="text-center">remember the surprises</p>
+      <p className="text-center">remember the fun you had</p>
+      <p className="text-center">remember the sweet moments</p>
+      <p className="text-center"> now write it all down </p>
     </div>
   );
 }
