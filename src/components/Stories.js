@@ -42,7 +42,7 @@ export default function Stories() {
     }
   ]);
 
-  const [mark, setMark] = useState(<p>hey </p>);
+  const [markup, setMarkup] = useState(<p>Loading </p>);
 
   const newStory = story => {
     const newStory = {
@@ -55,6 +55,15 @@ export default function Stories() {
     };
 
     setStories([...updatedStories, newStory]);
+  };
+
+  const addLike = (story, index) => {
+    console.log(story, index);
+    setStories(() => {
+      let stories = [...updatedStories];
+      stories[index].likes = story.likes;
+      return stories;
+    });
   };
 
   useEffect(() => {
@@ -81,12 +90,16 @@ export default function Stories() {
             {story.story.length > 99 ? "..." : ""}{" "}
           </p>
 
-          <ViewStory story={story} index={index} />
+          <div className="d-flex align-items-center  justify-content-center ">
+            <p className="pt-3 pr-3">{story.likes} likes</p>
+
+            <ViewStory story={story} index={index} addLike={addLike} />
+          </div>
         </div>
       );
     });
 
-    setMark(renderedStories);
+    setMarkup(renderedStories);
   }, [updatedStories]);
 
   return (
@@ -94,7 +107,7 @@ export default function Stories() {
       <h2>Stories</h2>
       <div className="story-container ">
         <div className="row">
-          {mark}
+          {markup}
           <AddStory newStory={newStory} />
         </div>
       </div>

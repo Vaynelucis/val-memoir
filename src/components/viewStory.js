@@ -1,8 +1,15 @@
 import React from "react";
 
-export default function viewStory({ story, index }) {
+export default function viewStory({ story, index, addLike }) {
   // console.log(story);
   // console.log(`#exampleModalScrollable${index}`);
+
+  const like = e => {
+    // console.log(e.target);
+    // console.log(story);
+    story.likes += 1;
+    addLike(story, index);
+  };
 
   const button = (
     <button
@@ -50,10 +57,18 @@ export default function viewStory({ story, index }) {
             </button>
           </div>
           <div className="modal-body">{story ? story.story : "Loading"}</div>
-          <div className="modal-footer">
+          <div className="modal-footer d-flex">
+            <p className=" mt-3 r-3">{story ? story.likes : "loading"} likes</p>
             <button
               type="button"
-              className="btn btn-secondary"
+              className="btn btn-secondary mx-3 "
+              onClick={like}
+            >
+              Like
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary  "
               data-dismiss="modal"
             >
               Close
