@@ -22,23 +22,24 @@ export default function Carousel() {
   );
 
   const loadedImages = images.map((image, index) => {
+    // console.log(image.height);
     if (index === 0) {
       return (
         <div key={index} className="carousel-item active">
-          <img src={image.urls.regular} className="d-block w-100" alt="..." />
+          <img src={image.urls.full} className="d-block w-100 " alt="..." />
         </div>
       );
     } else {
       return (
         <div key={index} className="carousel-item">
-          <img src={image.urls.regular} className="d-block w-100" alt="..." />
+          <img src={image.urls.full} className="d-block w-100" alt="..." />
         </div>
       );
     }
   });
 
   return (
-    <div className="myCarousel  mx-0 px-0">
+    <div className="myCarousel container  mx-0 px-0">
       <div
         id="carouselExampleIndicators"
         className="carousel slide container  mx-0 px-0"

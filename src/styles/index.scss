@@ -46,8 +46,31 @@ code {
     }
 }
 
-.myCarousel div {
-    width: 100vw !important;
+// .myCarousel {}
+
+
+img {
+    // width: 100%;
+    height: auto !important;
+}
+
+.myCarousel {
+
+    // display: flex !important !important;
+    // align-items: center !important !important;
+    // flex-wrap: nowrap !important !important;
+
+    div {
+        max-height: 50vh;
+
+        // flex: 1 !important !important;
+        // justify-content: flex-end !important !important;
+        // overflow: auto;
+
+
+        width: 100vw !important;
+        min-width: 100vw !important;
+    }
 }
 
 .myCarousel a {
@@ -67,6 +90,8 @@ code {
 .nav-container {
     display: flex;
     align-items: center;
+
+    padding: 20px;
 
     span {
         color: red
