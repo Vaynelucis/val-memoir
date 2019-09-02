@@ -10,7 +10,8 @@ export default function Stories() {
       lastname: "lucis",
       headline: "The Kingsglaive",
       story:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore."
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore.",
+      likes: 10
     },
     {
       username: "Nyx",
@@ -18,7 +19,8 @@ export default function Stories() {
       lastname: "Ulric",
       headline: "The Lucii",
       story:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore."
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore.",
+      likes: 10
     },
     {
       username: "Luna",
@@ -26,7 +28,8 @@ export default function Stories() {
       lastname: "Freya",
       headline: "The Oracle",
       story:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore."
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore.",
+      likes: 10
     },
     {
       username: "Ardyn",
@@ -34,7 +37,8 @@ export default function Stories() {
       lastname: "Lucis",
       headline: "The Usurper",
       story:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore."
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta doloremque molestias voluptates officiis sequi totam tempore dolore      ipsam illo iusto doloribus unde sed est, quis, ipsa veniam omnisinventore.",
+      likes: 10
     }
   ]);
 
@@ -46,7 +50,8 @@ export default function Stories() {
       firstname: story.firstname,
       lastname: story.lastname,
       headline: story.headline,
-      story: story.story
+      story: story.story,
+      likes: story.likes
     };
 
     setStories([...updatedStories, newStory]);

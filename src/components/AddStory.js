@@ -9,13 +9,14 @@ export default function AddStory({ newStory }) {
       firstname: e.target.firstName.value,
       lastname: e.target.lastName.value,
       headline: e.target.headline.value,
-      story: e.target.story.value
+      story: e.target.story.value,
+      likes: 0
     };
 
     newStory(submitedFields);
     e.target.reset();
 
-    console.log(e.target);
+    // console.log(e.target);
 
     // console.log(submitedFields);
   };
