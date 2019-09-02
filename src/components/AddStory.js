@@ -80,7 +80,7 @@ export default function AddStory({ newStory, currentStories }) {
       <div className="modal-dialog modal-dialog-scrollable" role="document">
         <div className="modal-content ">
           <div className="modal-header ">
-            <header className="story-header story-header-modal pl-5 ml-md-5">
+            <header className="story-header story-header-modal ">
               <div>
                 <h3>Add Your Story</h3>
               </div>
@@ -97,7 +97,11 @@ export default function AddStory({ newStory, currentStories }) {
           </div>
           <div className="modal-body">
             <div className="container-fluid"> </div>
-            <form autoComplete="off" onSubmit={handleSubmit}>
+            <form
+              className="text-left"
+              autoComplete="off"
+              onSubmit={handleSubmit}
+            >
               <div className="form-row">
                 <div className="col">
                   <input
@@ -166,20 +170,15 @@ export default function AddStory({ newStory, currentStories }) {
                   ></textarea>
                 </div>
               </div>
-              <button type="submit" className="btn btn-primary text-center">
+              <button
+                type="submit"
+                className="btn btn-primary btn-sm justify-content-start text-left"
+              >
                 Submit
               </button>
             </form>
           </div>
-          <div className="modal-footer">
-            <button
-              type="button"
-              className="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+          <div className="modal-footer"></div>
         </div>
       </div>
     </div>
