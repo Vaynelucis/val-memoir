@@ -29,14 +29,14 @@ export default function viewStory({ story, index, addLike }) {
       <div className="modal-dialog modal-dialog-scrollable" role="document">
         <div className="modal-content ">
           <div className="modal-header ">
-            <header className="story-header story-header-modal pl-5 ml-md-5">
+            <header className="story-header story-header-modal  ">
               <span className="avatar">
                 {story ? story.firstname.substring(0, 1).toUpperCase() : "J"}
                 {story ? story.lastname.substring(0, 1).toUpperCase() : "D"}
               </span>
               <div>
                 <h3>{story ? story.headline : "Headline"}</h3>
-                <p>
+                <p className="text-left">
                   by{" "}
                   <span>
                     {story ? story.firstname : "Loading"}{" "}
