@@ -1,19 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function AddStory({ newStory, currentStories }) {
-  let valid = true;
-  let styleValid = {
-    display: `${valid ? "none" : "block"}`
-  };
-  let invalidStyle = (
-    <div style={styleValid} className="form-row my-0 text-left">
-      <div className="col my-0">
-        <label htmlFor="username" className=" text-left  py-0 mt-3 mb-0">
-          Invalid username
-        </label>
+  const [valid, setValid] = useState(true);
+  const [invalidIndicator, setIndicator] = useState(<p>loading</p>);
+
+  useEffect(() => {
+    let invalidMarkup = (
+      <div style={styleValid} className="form-row my-0 text-left ">
+        <div className="col my-0">
+          <label htmlFor="username" className=" text-left  py-0 mt-3 mb-0">
+            Username already taken
+          </label>
+        </div>
       </div>
-    </div>
-  );
+    );
+    setIndicator(invalidMarkup);
+  }, [valid]);
+
+  //   let valid = true;
+  let styleValid = {
+    display: `${valid ? "none" : "block"}`,
+    color: "red"
+  };
 
   const validateUsername = e => {
     let currentValue = e.target.value;
@@ -23,12 +31,15 @@ export default function AddStory({ newStory, currentStories }) {
     // });
 
     for (let index = 0; index < currentStories.length; index++) {
-      if (currentStories[index].username === currentValue) {
-        valid = false;
+      if (
+        currentStories[index].username.toLowerCase() ===
+        currentValue.toLowerCase()
+      ) {
+        setValid(false);
         // display = "block";
         break;
       } else {
-        valid = true;
+        setValid(true);
         // display = "d-none";
       }
     }
@@ -133,7 +144,7 @@ export default function AddStory({ newStory, currentStories }) {
                 </div>
               </div>
 
-              {invalidStyle}
+              {invalidIndicator}
 
               <div className="form-row my-3">
                 <div className="col">
