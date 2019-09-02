@@ -16,8 +16,8 @@ export default function Carousel() {
   // console.log(images);
 
   const loadingImages = (
-    <div className="carousel-item active">
-      <img src="valentineHeart.png" className="d-block w-100" alt="..." />
+    <div className="d-flex justify-content-center">
+      <h2 className=" text-center ">Loading</h2>
     </div>
   );
 
