@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ViewStory from "./viewStory";
 import AddStory from "./AddStory";
+import likeIcon from "../styles/like.svg";
 
 export default function Stories() {
   const [updatedStories, setStories] = useState([
@@ -74,6 +75,11 @@ export default function Stories() {
     });
   };
 
+  const addLikeLocal = (story, index, e) => {
+    story.likes += 1;
+    addLike(story, index);
+  };
+
   useEffect(() => {
     let renderedStories = updatedStories.map((story, index) => {
       return (
@@ -99,6 +105,12 @@ export default function Stories() {
           </p>
 
           <div className="d-flex align-items-center  justify-content-center ">
+            <img
+              src={likeIcon}
+              onClick={e => addLikeLocal(story, index, e)}
+              alt="like icon"
+              className="like-btn mx-2 mb-3 "
+            />
             <p className="pt-3 pr-3">{story.likes} Likes</p>
 
             <ViewStory story={story} index={index} addLike={addLike} />

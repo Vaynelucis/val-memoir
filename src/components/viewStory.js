@@ -67,8 +67,8 @@ export default function viewStory({ story, index, addLike }) {
             <img
               onClick={like}
               src={likeIcon}
-              alt=""
-              className="like-btn mx-2 mb-3"
+              alt="like icon"
+              className="like-btn mx-2 mb-3 "
             />
             {/* <button
               type="button"
