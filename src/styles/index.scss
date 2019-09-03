@@ -91,8 +91,20 @@ body {
 }
 
 
-.story-header {}
 
+
+.like-btn {
+    width: 50px;
+    height: 30px;
+
+
+
+}
+
+.like-btn:hover {
+    cursor: pointer;
+
+}
 
 .btn-primary.focus,
 .btn-primary:focus {
@@ -119,7 +131,7 @@ h2 {
 
 
     :hover {
-        cursor: pointer;
+        cursor: pointer !important;
     }
 
     p {

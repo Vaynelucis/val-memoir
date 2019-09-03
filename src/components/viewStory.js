@@ -1,4 +1,5 @@
 import React from "react";
+import likeIcon from "../styles/like.svg";
 
 export default function viewStory({ story, index, addLike }) {
   const like = e => {
@@ -58,13 +59,17 @@ export default function viewStory({ story, index, addLike }) {
           <div className="modal-body">{story ? story.story : "Loading"}</div>
           <div className="modal-footer d-flex">
             <p className=" mt-3 r-3">{story ? story.likes : "loading"} likes</p>
-            <button
+            {/* <button
               type="button"
               className="btn btn-secondary btn-sm mx-3 "
               onClick={like}
-            >
-              Like
-            </button>
+            ></button> */}
+            <img
+              onClick={like}
+              src={likeIcon}
+              alt=""
+              className="like-btn mx-2 mb-3"
+            />
             {/* <button
               type="button"
               className="btn btn-secondary btn-sm "

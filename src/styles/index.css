@@ -75,6 +75,15 @@ body {
   display: block;
 }
 
+.like-btn {
+  width: 50px;
+  height: 30px;
+}
+
+.like-btn:hover {
+  cursor: pointer;
+}
+
 .btn-primary.focus,
 .btn-primary:focus {
   -webkit-box-shadow: 0 0 0 0.2rem #c72b50 !important;
@@ -96,7 +105,7 @@ h2 {
 }
 
 .addStory :hover {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .addStory p {
