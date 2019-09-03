@@ -99,7 +99,7 @@ export default function Stories() {
           </p>
 
           <div className="d-flex align-items-center  justify-content-center ">
-            <p className="pt-3 pr-3">{story.likes} likes</p>
+            <p className="pt-3 pr-3">{story.likes} Likes</p>
 
             <ViewStory story={story} index={index} addLike={addLike} />
           </div>

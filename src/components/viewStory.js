@@ -58,7 +58,7 @@ export default function viewStory({ story, index, addLike }) {
           </div>
           <div className="modal-body">{story ? story.story : "Loading"}</div>
           <div className="modal-footer d-flex">
-            <p className=" mt-3 r-3">{story ? story.likes : "loading"} likes</p>
+            <p className=" mt-3 r-3">{story ? story.likes : "loading"} Likes</p>
             {/* <button
               type="button"
               className="btn btn-secondary btn-sm mx-3 "
