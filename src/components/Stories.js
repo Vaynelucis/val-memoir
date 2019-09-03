@@ -126,7 +126,7 @@ export default function Stories() {
     <div id="stories" className="container text-center">
       <h2>Stories</h2>
       <div className="story-container ">
-        <div className="row">
+        <div className="row  justify-content-center text-center">
           {markup}
           <AddStory
             className=""
